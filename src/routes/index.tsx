@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Sparkles,
@@ -170,18 +170,18 @@ function Nav() {
             ))}
           </div>
           <div className="hidden items-center space-x-4 md:flex">
-            <a
-              href="#pricing"
+            <Link
+              to="/auth"
               className="text-sm font-semibold text-gray-700 transition-colors hover:text-brand"
             >
               Log in
-            </a>
-            <a
-              href="#cta"
+            </Link>
+            <Link
+              to="/auth"
               className="rounded-full bg-gradient-to-r from-brand to-brand-pink px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get Started
-            </a>
+            </Link>
           </div>
           <button
             className="rounded-full p-2 text-gray-700 md:hidden"
@@ -203,13 +203,13 @@ function Nav() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#cta"
+            <Link
+              to="/auth"
               onClick={() => setOpen(false)}
               className="mt-2 block rounded-full bg-gradient-to-r from-brand to-brand-pink px-5 py-2.5 text-center text-sm font-semibold text-white"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         )}
       </div>
@@ -285,12 +285,12 @@ function Hero() {
             celebrates creativity. Built for the way you actually live.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
-              href="#cta"
+            <Link
+              to="/auth"
               className="rounded-full bg-gradient-to-r from-brand to-brand-pink px-8 py-4 text-lg font-bold text-white transition-opacity hover:opacity-90"
             >
               Get Started
-            </a>
+            </Link>
             <a
               href="#features"
               className="glass-panel flex items-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-gray-800 transition-colors hover:bg-white"
@@ -778,12 +778,12 @@ function Pricing() {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="#cta"
+                  <Link
+                    to="/auth"
                     className={`block w-full rounded-full py-4 text-center font-bold transition-colors ${p.style}`}
                   >
                     {p.cta}
-                  </a>
+                  </Link>
                 </div>
               </Reveal>
             );
