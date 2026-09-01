@@ -95,7 +95,7 @@ function timeAgo(iso: string) {
   return `${Math.floor(h / 24)}d ago`;
 }
 
-function Ava({ name, url, size = "h-10 w-10 text-xs" }: { name: string; url?: string | null; size?: string }) {
+function Ava({ name, url, size = "h-10 w-10 text-xs" }: { name: string; url?: string | null | undefined; size?: string }) {
   if (url) return <img src={url} alt={name} className={`${size} shrink-0 rounded-full object-cover`} />;
   return (
     <span
